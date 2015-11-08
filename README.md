@@ -1,5 +1,5 @@
 # react-form-steps-example
-Form steps example with React.js
+Form steps example with React.js. Check out the [live example](http://robertwpearce.com/react-form-steps-example/after/index.html).
 
 ## Setup
 Either [fork](https://help.github.com/articles/fork-a-repo/) and [clone](https://help.github.com/articles/cloning-a-repository/) this repository or download it as a `.zip` from the button on the right side of the repo's GitHub page.
