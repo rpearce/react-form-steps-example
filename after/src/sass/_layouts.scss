@@ -3,3 +3,12 @@
   margin-left: auto;
   margin-right: auto;
 }
+.layout--leftHalf {
+  @include absolute(0, null, 0, 0);
+  @include size(50%, 100%);
+}
+.layout--rightHalf {
+  width: 50%;
+  margin-left: 50%;
+  margin-top: 100px;
+}

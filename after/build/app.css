@@ -405,6 +405,19 @@ h3 {
   margin-left: auto;
   margin-right: auto; }
 
+.layout--leftHalf {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 100%; }
+
+.layout--rightHalf {
+  width: 50%;
+  margin-left: 50%;
+  margin-top: 100px; }
+
 .btn {
   display: inline-block;
   height: 42px;
@@ -553,6 +566,5 @@ h3 {
   background-image: url("../images/pets.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
-  height: 400px; }
+  background-size: cover; }
 

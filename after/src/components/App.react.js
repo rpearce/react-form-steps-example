@@ -16,17 +16,19 @@ class App extends Component {
   render() {
     return (
       <main role="main">
-        <div className="banner"></div>
-        <section aria-labelledby="stepForm-title" className="layout--constrained">
-          <h2 id="stepForm-title">Pet Information</h2>
-          <Form
-            currentStep={ this.state.currentStep }
-            pet={ this.state.pet }
-            setStep={ this._setStep.bind(this) }
-            setItem={ this._setItem.bind(this) }
-            prevStep={ this._prevStep.bind(this) }
-            nextStep={ this._nextStep.bind(this) } />
-        </section>
+        <div className="layout--leftHalf banner"></div>
+        <div className="layout--rightHalf">
+          <section aria-labelledby="stepForm-title" className="layout--constrained">
+            <h2 id="stepForm-title">Pet Information</h2>
+            <Form
+              currentStep={ this.state.currentStep }
+              pet={ this.state.pet }
+              setStep={ this._setStep.bind(this) }
+              setItem={ this._setItem.bind(this) }
+              prevStep={ this._prevStep.bind(this) }
+              nextStep={ this._nextStep.bind(this) } />
+          </section>
+        </div>
       </main>
     );
   }
