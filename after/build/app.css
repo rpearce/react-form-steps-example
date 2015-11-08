@@ -1,0 +1,200 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+html,
+body {
+  height: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Open Sans", Helvetica, Helvetica Neue, Arial, sans-serif;
+  line-height: 1.75rem;
+  color: #334249;
+  background-color: #FFF;
+  margin: 0; }
+
+body,
+input,
+button {
+  -webkit-font-smoothing: antialiased; }
+
+/*
+ * I normally wouldn't define anything else after this point
+ * in such a shotgun selector fashion.
+ */
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: 0.1rem; }
+
+h1 {
+  font-size: 2.625rem; }
+
+h2 {
+  font-size: 1.625rem; }
+
+h3 {
+  font-size: 1.25rem; }
+
+.layout--constrained {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.btn {
+  display: inline-block;
+  height: 42px;
+  line-height: 38px;
+  padding: 0 18px;
+  border: 2px solid;
+  border-radius: 25px;
+  cursor: pointer;
+  outline: 0;
+  font-size: .813rem;
+  font-weight: 600;
+  letter-spacing: 0.03rem; }
+
+.btn--primary {
+  background-color: #2ECC71;
+  border-color: #2ECC71;
+  color: #FFF; }
+  .btn--primary:hover {
+    background-color: #25a25a;
+    border-color: #25a25a; }
+
+.btn--secondary {
+  background-color: #FFF;
+  border-color: #EEE;
+  color: #AAA; }
+  .btn--secondary:hover {
+    border-color: #d4d4d4;
+    color: #909090; }
+
+.stepForm {
+  /*@extend .layout--constrained;*/
+  margin: 0 auto;
+  color: #777;
+  /*
+   * Forgive this code's
+   * lack of goodness
+   */ }
+  .stepForm input[type="radio"],
+  .stepForm input[type="checkbox"] {
+    display: inline;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    outline: none;
+    padding: 0; }
+  .stepForm input[type="radio"] + label,
+  .stepForm input[type="checkbox"] + label {
+    display: inline;
+    color: #AAA;
+    width: 26px;
+    margin-right: 40px;
+    line-height: 45px;
+    cursor: pointer;
+    font-size: 0.813rem; }
+  .stepForm input[type="radio"] + label:before,
+  .stepForm input[type="checkbox"] + label:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-right: 10px;
+    margin-top: -2px;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid #E5E5E5;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    font-size: 9px; }
+  .stepForm input[type="radio"] + label:before {
+    border-radius: 50%; }
+  .stepForm input[type="radio"]:checked + label,
+  .stepForm input[type="checkbox"]:checked + label {
+    color: #777; }
+  .stepForm input[type="radio"]:checked + label:before,
+  .stepForm input[type="checkbox"]:checked + label:before {
+    content: "";
+    border-color: #2ECC71;
+    background-color: #2ECC71; }
+
+.stepForm__item,
+.stepForm__item--borderless {
+  position: relative; }
+
+.stepForm__item {
+  border-bottom: 1px solid #DEE2E2; }
+
+.stepForm__item--borderless {
+  border-bottom: none; }
+
+.stepForm__input,
+.stepForm__item--nonText {
+  padding: 0 10px 0 70px; }
+
+.stepForm__input,
+.stepForm__select {
+  outline: 0;
+  height: 45px;
+  border: none;
+  background-color: #FFF; }
+
+.stepForm__input {
+  width: 100%; }
+
+.stepForm__select {
+  margin-left: 70px;
+  font-size: 0.813rem; }
+
+.stepForm__textarea {
+  width: 100%;
+  outline: 0;
+  padding: 10px;
+  border: none;
+  background-color: #FFF;
+  border-left: 1px solid #DEE2E2;
+  resize: none; }
+
+.stepForm__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 45px;
+  width: 45px;
+  font-weight: 600;
+  color: #AAA;
+  cursor: pointer; }
+
+.stepForm__input,
+.stepForm__textarea,
+.stepForm__label {
+  font-size: 0.813rem; }
+
+.stepForm__actions {
+  position: relative;
+  padding: 20px 0; }
+
+.stepForm__btn--right,
+.stepForm__btn--left {
+  position: absolute; }
+
+.stepForm__btn--right {
+  right: 0; }
+
+.stepForm__btn--left {
+  left: 0; }
+
+.banner {
+  background-image: url("../images/pets.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 400px; }
+

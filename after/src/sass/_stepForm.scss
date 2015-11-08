@@ -1,0 +1,120 @@
+.stepForm {
+  /*@extend .layout--constrained;*/
+  margin: 0 auto;
+  color: #777;
+
+  /*
+   * Forgive this code's
+   * lack of goodness
+   */
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: inline;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    outline: none;
+    padding: 0;
+  }
+  input[type="radio"] + label,
+  input[type="checkbox"] + label {
+    display: inline;
+    color: #AAA;
+    width: 26px;
+    margin-right: 40px;
+    line-height: 45px;
+    cursor: pointer;
+    font-size: 0.813rem;
+  }
+  input[type="radio"] + label:before,
+  input[type="checkbox"] + label:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-right: 10px;
+    margin-top: -2px;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid #E5E5E5;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    font-size: 9px;
+  }
+  input[type="radio"] + label:before {
+    border-radius: 50%;
+  }
+  input[type="radio"]:checked + label,
+  input[type="checkbox"]:checked + label {
+    color: #777;
+  }
+  input[type="radio"]:checked + label:before,
+  input[type="checkbox"]:checked + label:before {
+    content: "";
+    border-color: $green;
+    background-color: $green;
+  }
+}
+.stepForm__item,
+.stepForm__item--borderless {
+  position: relative;
+}
+.stepForm__item {
+  border-bottom: 1px solid #DEE2E2;
+}
+.stepForm__item--borderless {
+  border-bottom: none;
+}
+.stepForm__input,
+.stepForm__item--nonText {
+  padding: 0 10px 0 70px;
+}
+.stepForm__input,
+.stepForm__select {
+  outline: 0;
+  height: 45px;
+  border: none;
+  background-color: $white;
+}
+.stepForm__input {
+  width: 100%;
+}
+.stepForm__select {
+  margin-left: 70px;
+  font-size: $fontSize--small;
+}
+.stepForm__textarea {
+  width: 100%;
+  outline: 0;
+  padding: 10px;
+  border: none;
+  background-color: $white;
+  border-left: 1px solid #DEE2E2;
+  resize: none;
+}
+.stepForm__label {
+  @include absolute(0, null, null, 0);
+  line-height: 45px;
+  width: 45px;
+  font-weight: 600;
+  color: #AAA;
+  cursor: pointer;
+}
+.stepForm__input,
+.stepForm__textarea,
+.stepForm__label {
+  font-size: $fontSize--small;
+}
+.stepForm__actions {
+  position: relative;
+  padding: 20px 0;
+}
+.stepForm__btn--right,
+.stepForm__btn--left {
+  position: absolute;
+}
+.stepForm__btn--right {
+  right: 0;
+}
+.stepForm__btn--left {
+  left: 0;
+}
