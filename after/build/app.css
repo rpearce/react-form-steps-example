@@ -416,7 +416,9 @@ h3 {
 .layout--rightHalf {
   width: 50%;
   margin-left: 50%;
-  margin-top: 100px; }
+  margin-top: 100px;
+  display: inline-block;
+  /* To fix left side's bottom whitespace probs */ }
 
 .btn {
   display: inline-block;
