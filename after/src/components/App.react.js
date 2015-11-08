@@ -26,7 +26,8 @@ class App extends Component {
               setStep={ this._setStep.bind(this) }
               setItem={ this._setItem.bind(this) }
               prevStep={ this._prevStep.bind(this) }
-              nextStep={ this._nextStep.bind(this) } />
+              nextStep={ this._nextStep.bind(this) }
+              complete={ this._complete.bind(this) } />
           </section>
         </div>
       </main>
@@ -39,6 +40,9 @@ class App extends Component {
       let parsedData = JSON.parse(existingData),
           currentStep = parsedData.currentStep,
           pet = parsedData.pet;
+      this.setState({ currentStep, pet });
+    } else {
+      let { currentStep, pet } = this.props;
       this.setState({ currentStep, pet });
     }
   }
@@ -69,6 +73,13 @@ class App extends Component {
 
   _updateStorage(json) {
     window.localStorage.setItem('example', json);
+    this._fetchFromStorage();
+  }
+
+  _complete(e) {
+    e.preventDefault();
+    window.localStorage.clear();
+
     this._fetchFromStorage();
   }
 }
