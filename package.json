@@ -39,10 +39,9 @@
     "watch": "^0.16.0"
   },
   "dependencies": {
-    "history": "^1.13.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
-    "react-router": "^0.13.5"
+    "react-expanding-textarea": "^0.1.1"
   },
   "browserify": {
     "transform": [

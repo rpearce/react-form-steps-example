@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ExpandingTextarea from './ExpandingTextarea.react';
+import Textarea from 'react-expanding-textarea';
 
 class Step3 extends Component {
   render() {
@@ -7,7 +7,7 @@ class Step3 extends Component {
     return (
       <div>
         <div>
-          <ExpandingTextarea rows="1" maxLength="3000" className="stepForm__textarea" name="pet[notes]" placeholder="Additional notes" defaultValue={ notes } onChange={ this.props.setItem } />
+          <Textarea rows="1" maxLength="3000" className="stepForm__textarea" name="pet[notes]" placeholder="Additional notes" defaultValue={ notes } onChange={ this.props.setItem } />
         </div>
         <div>
           <input type="checkbox" id="stepForm-agree" name="pet[termsAccepted]" checked={ termsAccepted } onChange={ this.props.setItem } />
