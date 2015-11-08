@@ -41,7 +41,7 @@
   "dependencies": {
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
-    "react-expanding-textarea": "^0.1.1"
+    "react-expanding-textarea": "^0.1.2"
   },
   "browserify": {
     "transform": [
