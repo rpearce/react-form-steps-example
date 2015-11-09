@@ -42,8 +42,7 @@ class App extends Component {
           pet = parsedData.pet;
       this.setState({ currentStep, pet });
     } else {
-      let { currentStep, pet } = this.props;
-      this.setState({ currentStep, pet });
+      this.setState({ currentStep: 1, pet: {} }); // some stupid bug is retaining info here so have to manually set
     }
   }
 

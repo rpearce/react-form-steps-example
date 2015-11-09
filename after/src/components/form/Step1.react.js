@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class Step1 extends Component {
   render() {
     const { name, type, age, gender } = this.props.pet;
+    console.log(name);
     return (
       <div>
         <div className="stepForm__item">
