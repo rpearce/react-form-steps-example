@@ -6,9 +6,8 @@
   "scripts": {
     "setup": "mkdir -p before/build/ && mkdir -p after/build/",
     "test": "test",
-    "watch:js:after": "watch 'npm run build:after' after/src/components",
-    "watch:js:before": "watch 'npm run build:before' before/src/components",
-    "watch:sass:after": "watch 'npm run build:sass:after' after/src/sass",
+    "watch:js:after": "watchify after/src/browser.js -o 'uglifyjs > after/build/app.js'",
+    "watch:js:before": "watchify before/src/browser.js -o 'uglifyjs > before/build/app.js'",
     "build:sass:after": "cat after/src/sass/app.scss | node-sass -rx --include-path after/src/sass/ > after/build/app.css",
     "build:before": "browserify before/src/browser.js -o before/build/app.js",
     "build:after": "browserify after/src/browser.js | uglifyjs > after/build/app.js",
@@ -36,7 +35,7 @@
     "browserify": "^12.0.1",
     "node-sass": "^3.4.1",
     "uglifyjs": "^2.4.10",
-    "watch": "^0.16.0"
+    "watchify": "^3.6.0"
   },
   "dependencies": {
     "react": "^0.14.2",
