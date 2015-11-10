@@ -10,7 +10,10 @@ class Geocities extends Component {
         <marquee>
           <h2>I will be your guide</h2>
         </marquee>
-        <div style={ { textAlign: 'center', fontSize: '24px' } }>@RobertWPearce</div>
+        <div style={ { textAlign: 'center', fontSize: '24px' } }>
+          @RobertWPearce<br /><br />
+          The Iron Yard.com
+        </div>
         <div dangerouslySetInnerHTML={ this.nyanCat() }></div>
       </div>
     );
