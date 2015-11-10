@@ -45,7 +45,7 @@ class App extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.pets.reverse().map(function(pet) {
+                  {this.state.pets.map(function(pet) {
                     /*
                      * Example showing you can put this code
                      * directly in the JSX.
