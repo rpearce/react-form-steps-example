@@ -8,6 +8,7 @@
     "test": "test",
     "watch:js:after": "watchify after/src/browser.js -o 'uglifyjs > after/build/app.js'",
     "watch:js:before": "watchify before/src/browser.js -o 'uglifyjs > before/build/app.js'",
+    "watch:js:hello": "watchify hello_world/src/browser.js -o 'uglifyjs > hello_world/build/app.js'",
     "build:sass:after": "cat after/src/sass/app.scss | node-sass -rx --include-path after/src/sass/ > after/build/app.css",
     "build:before": "browserify before/src/browser.js -o before/build/app.js",
     "build:after": "browserify after/src/browser.js | uglifyjs > after/build/app.js",

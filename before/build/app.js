@@ -1,1 +1,1 @@
-console.error("Error: Cannot find module './components/App' from '/Users/rpearce/projects/react-form-steps-example/before/src'");
+console.error("SyntaxError: /Users/rpearce/projects/react-form-steps-example/before/src/components/form/Step2.react.js: JSX attributes must only be assigned a non-empty expression (21:77) while parsing file: /Users/rpearce/projects/react-form-steps-example/before/src/components/form/Step2.react.js");

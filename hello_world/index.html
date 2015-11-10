@@ -1,0 +1,41 @@
+<!-- For the love of the Internet, do not actually make websites like this -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello World</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        background: url("http://www.wonder-tonic.com/geocitiesizer/images/bg/bluerock.jpg");
+        color: limegreen;
+      }
+      h1 {
+        font-size: 48px;
+        color: yellow;
+        display: inline-block;
+        background: red;
+      }
+      h2 {
+        font-size: 36px;
+        color: magenta;
+      }
+    </style>
+    <script>
+      window.addEventListener('load', fetchScript);
+
+      function fetchScript() {
+        var script = document.createElement('script');
+        script.src = './build/app.js';
+        document.documentElement.firstChild.appendChild(script);
+      }
+    </script>
+  </head>
+  <body style="text-transform:uppercase">
+    <div style="text-align:center;margin-top:100px;">
+      <img src="http://www.wonder-tonic.com/geocitiesizer/images/genie.gif" />
+      <img src="http://www.wonder-tonic.com/geocitiesizer/images/dancingbaby.gif" />
+    </div>
+  </body>
+</html>

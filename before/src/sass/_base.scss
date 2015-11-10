@@ -1,0 +1,60 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body {
+  height: 100%;
+  font-size: $fontSize--root;
+}
+body {
+  font-family: $base-fontFamily;
+  line-height: $base-lineHeight;
+  color: $base-color;
+  background-color: $white;
+  margin: 0;
+}
+body,
+input,
+button {
+  -webkit-font-smoothing: antialiased;
+}
+/*
+ * I normally wouldn't define anything else after this point
+ * in such a shotgun selector fashion.
+ */
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+h1 {
+  font-size: $fontSize--h1;
+}
+h2 {
+  font-size: $fontSize--h2;
+}
+h3 {
+  font-size: $fontSize--h3;
+}
+table {
+  width: 100%;
+}
+th,
+td {
+  padding: 15px 20px;
+  text-align: left;
+  border: 1px solid #DEE2E2;
+  color: #777;
+}
+.align--center {
+  text-align: center;
+}
+section {
+  margin-bottom: 80px;
+}
