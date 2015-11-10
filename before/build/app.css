@@ -406,7 +406,7 @@ h3 {
   margin-right: auto; }
 
 .layout--leftHalf {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
