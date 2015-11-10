@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import Form from './form/';
 
 class App extends Component {
-  static defaultProps = { currentStep: 1, pet: {} }
+  static defaultProps = {
+    currentStep: 1,
+    pet: {},
+    pets: [{ name: 'Molly', type: 'Golden Retriever', gender: 'female' }]
+  }
 
   constructor(props) {
     super(props);
-    this.state = { currentStep: props.currentStep, pet: props.pet };
+    this.state = { currentStep: props.currentStep, pet: props.pet, pets: props.pets };
   }
 
   componentWillMount() {
@@ -18,17 +22,47 @@ class App extends Component {
       <main role="main">
         <div className="layout--leftHalf banner"></div>
         <div className="layout--rightHalf">
-          <section aria-labelledby="stepForm-title" className="layout--constrained">
-            <h2 id="stepForm-title">Pet Information</h2>
-            <Form
-              currentStep={ this.state.currentStep }
-              pet={ this.state.pet }
-              setStep={ this._setStep.bind(this) }
-              setItem={ this._setItem.bind(this) }
-              prevStep={ this._prevStep.bind(this) }
-              nextStep={ this._nextStep.bind(this) }
-              complete={ this._complete.bind(this) } />
-          </section>
+          <div className="layout--constrained">
+            <section aria-labelledby="stepForm-title">
+              <h2 id="stepForm-title">Pet Information</h2>
+              <Form
+                currentStep={ this.state.currentStep }
+                pet={ this.state.pet }
+                setStep={ this._setStep.bind(this) }
+                setItem={ this._setItem.bind(this) }
+                prevStep={ this._prevStep.bind(this) }
+                nextStep={ this._nextStep.bind(this) }
+                complete={ this._complete.bind(this) } />
+            </section>
+            <section aria-labelledby="data-title">
+              <h2 id="data-title">Pets</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="align--center">Gender</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.pets.reverse().map(function(pet) {
+                    /*
+                     * Example showing you can put this code
+                     * directly in the JSX.
+                     */
+                    const genderCode = pet.gender === 'male' ? 9794 : 9792;
+                    return (
+                      <tr>
+                        <td>{ pet.name }</td>
+                        <td>{ pet.type }</td>
+                        <td className="align--center">{ String.fromCharCode(genderCode) }</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </section>
+          </div>
         </div>
       </main>
     );
@@ -79,7 +113,7 @@ class App extends Component {
   _complete(e) {
     e.preventDefault();
     window.localStorage.clear();
-
+    this.setState({ pets: this.state.pets.concat(this.state.pet) });
     this._fetchFromStorage();
   }
 }

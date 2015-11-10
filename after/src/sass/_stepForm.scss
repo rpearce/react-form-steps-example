@@ -106,11 +106,13 @@
 }
 .stepForm__actions {
   position: relative;
-  padding: 20px 0;
+  height: 82px;
 }
 .stepForm__btn--right,
 .stepForm__btn--left {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .stepForm__btn--right {
   right: 0;

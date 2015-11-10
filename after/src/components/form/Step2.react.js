@@ -14,8 +14,8 @@ class Step2 extends Component {
           <label htmlFor="stepForm-input7" className="stepForm__label">Address</label>
         </div>
         <div className="stepForm__item--borderless">
-          <input type="text" id="stepForm-input7" className="stepForm__input" name="pet[phone]" placeholder="555.867.5309" defaultValue={ phone } onChange={ this.props.setItem } />
-          <label htmlFor="stepForm-input7" className="stepForm__label">Phone</label>
+          <input type="text" id="stepForm-input8" className="stepForm__input" name="pet[phone]" placeholder="555.867.5309" defaultValue={ phone } onChange={ this.props.setItem } />
+          <label htmlFor="stepForm-input8" className="stepForm__label">Phone</label>
         </div>
         <div className="stepForm__actions">
           <button className="stepForm__btn--left btn btn--secondary" onClick={ this.props.prevStep }>Previous Step</button>

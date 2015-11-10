@@ -400,6 +400,22 @@ h2 {
 h3 {
   font-size: 1.25rem; }
 
+table {
+  width: 100%; }
+
+th,
+td {
+  padding: 15px 20px;
+  text-align: left;
+  border: 1px solid #DEE2E2;
+  color: #777; }
+
+.align--center {
+  text-align: center; }
+
+section {
+  margin-bottom: 80px; }
+
 .layout--constrained {
   width: 400px;
   margin-left: auto;
@@ -552,11 +568,13 @@ h3 {
 
 .stepForm__actions {
   position: relative;
-  padding: 20px 0; }
+  height: 82px; }
 
 .stepForm__btn--right,
 .stepForm__btn--left {
-  position: absolute; }
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
 
 .stepForm__btn--right {
   right: 0; }

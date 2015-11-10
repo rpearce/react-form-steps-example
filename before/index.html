@@ -21,31 +21,115 @@
     <main role="main">
       <div class="layout--leftHalf banner"></div>
       <div class="layout--rightHalf">
-        <section aria-labelledby="stepForm-title" class="layout--constrained">
-          <h2 id="stepForm-title">Pet Information</h2>
-          <form class="stepForm" action="/" method="POST">
-            <div>
-              <div class="stepForm__item">
-                <input type="text" id="stepForm-input1" class="stepForm__input" name="pet[name]" placeholder="Lola" />
-                <label for="stepForm-input1" class="stepForm__label">Name</label>
+        <div class="layout--constrained">
+          <section aria-labelledby="stepForm-title">
+            <h2 id="stepForm-title">Pet Information</h2>
+            <form class="stepForm" action="/" method="POST">
+              <div>
+                <div class="stepForm__item">
+                  <input type="text" id="stepForm-input1" class="stepForm__input" name="pet[name]" placeholder="Lola" />
+                  <label for="stepForm-input1" class="stepForm__label">Name</label>
+                </div>
+                <div class="stepForm__item">
+                  <input type="text" id="stepForm-input2" class="stepForm__input" name="pet[type]" placeholder="Golden Retriever" />
+                  <label for="stepForm-input2" class="stepForm__label">Type</label>
+                </div>
+                <div class="stepForm__item stepForm__item--nonText">
+                  <label class="stepForm__label">Gender</label>
+                  <input type="radio" name="pet[gender]" id="stepForm-input4" value="female" />
+                  <label for="stepForm-input4">Female</label>
+                  <input type="radio" name="pet[gender]" id="stepForm-input5" value="male" />
+                  <label for="stepForm-input5">Male</label>
+                </div>
               </div>
-              <div class="stepForm__item">
-                <input type="text" id="stepForm-input2" class="stepForm__input" name="pet[type]" placeholder="Golden Retriever" />
-                <label for="stepForm-input2" class="stepForm__label">Type</label>
+              <div>
+                <div class="stepForm__item">
+                  <input type="text" id="stepForm-input6" class="stepForm__input" name="pet[owner]" placeholder="John Q." />
+                  <label for="stepForm-input6" class="stepForm__label">Owner</label>
+                </div>
+                <div class="stepForm__item">
+                  <input type="text" id="stepForm-input7" class="stepForm__input" name="pet[address]" placeholder="123 Main Street" />
+                  <label for="stepForm-input7" class="stepForm__label">Address</label>
+                </div>
+                <div class="stepForm__item">
+                  <input type="text" id="stepForm-input8" class="stepForm__input" name="pet[phone]" placeholder="555.867.5309" />
+                  <label for="stepForm-input8" class="stepForm__label">Phone</label>
+                </div>
               </div>
-              <div class="stepForm__item--borderless stepForm__item--nonText">
-                <label class="stepForm__label">Gender</label>
-                <input type="radio" name="pet[gender]" id="stepForm-input4" value="female" />
-                <label for="stepForm-input4">Female</label>
-                <input type="radio" name="pet[gender]" id="stepForm-input5" value="male" />
-                <label for="stepForm-input5">Male</label>
+              <div>
+                <div>
+                  <textarea rows="1" maxLength="3000" class="stepForm__textarea" name="pet[notes]" placeholder="Additional notes"></textarea>
+                </div>
+                <div>
+                  <input type="checkbox" id="stepForm-agree" name="pet[termsAccepted]" />
+                  <label for="stepForm-agree">I agree to the Terms &amp; Conditions</label>
+                </div>
+                <div class="stepForm__actions">
+                  <button class="stepForm__btn--right btn btn--primary">Complete</button>
+                </div>
               </div>
-              <div class="stepForm__actions">
-                <button class="stepForm__btn--right btn btn--primary">Next Step</button>
-              </div>
-            </div>
-          </form>
-        </section>
+            </form>
+          </section>
+          <section aria-labelledby="data-title">
+            <h2 id="data-title">Pets</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th class="align--center">Gender</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Bailey</td>
+                  <td>English Bulldog</td>
+                  <td class="align--center">&#9794;</td>
+                </tr>
+                <tr>
+                  <td>Bella</td>
+                  <td>Golden Retriever</td>
+                  <td class="align--center">&#9792;</td>
+                </tr>
+                <tr>
+                  <td>Lucy</td>
+                  <td>Corgi</td>
+                  <td class="align--center">&#9792;</td>
+                </tr>
+                <tr>
+                  <td>Max</td>
+                  <td>French Bulldog</td>
+                  <td class="align--center">&#9794;</td>
+                </tr>
+                <tr>
+                  <td>Charlie</td>
+                  <td>Pomeranian</td>
+                  <td class="align--center">&#9794;</td>
+                </tr>
+                <tr>
+                  <td>Molly</td>
+                  <td>Saint Bernard</td>
+                  <td class="align--center">&#9792;</td>
+                </tr>
+                <tr>
+                  <td>Daisy</td>
+                  <td>Basset Hound</td>
+                  <td class="align--center">&#9792;</td>
+                </tr>
+                <tr>
+                  <td>Maggie</td>
+                  <td>Pug</td>
+                  <td class="align--center">&#9792;</td>
+                </tr>
+                <tr>
+                  <td>Buddy</td>
+                  <td>Labrador Retriever</td>
+                  <td class="align--center">&#9794;</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
       </div>
     </main>
   </body>

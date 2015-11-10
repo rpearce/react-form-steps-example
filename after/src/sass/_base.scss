@@ -42,3 +42,19 @@ h2 {
 h3 {
   font-size: $fontSize--h3;
 }
+table {
+  width: 100%;
+}
+th,
+td {
+  padding: 15px 20px;
+  text-align: left;
+  border: 1px solid #DEE2E2;
+  color: #777;
+}
+.align--center {
+  text-align: center;
+}
+section {
+  margin-bottom: 80px;
+}
