@@ -4,6 +4,10 @@ class Geocities extends Component {
   render() {
     return (
       <div>
+        <div style={ { textAlign: 'center', marginTop: '50px' } }>
+          <img src="http://www.wonder-tonic.com/geocitiesizer/images/genie.gif" />
+          <img src="http://www.wonder-tonic.com/geocitiesizer/images/dancingbaby.gif" />
+        </div>
         <marquee>
           <h1>Welcome to the Internet</h1>
         </marquee>
