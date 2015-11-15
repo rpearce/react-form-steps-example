@@ -24,7 +24,7 @@ class Geocities extends Component {
   }
 
   nyanCat() {
-    return { __html: '<marquee direction="right"><img src="http://files.gamebanana.com/img/ico/sprays/_1317-.gif" /></marquee>' };
+    return { __html: '<marquee direction="right"><img src="https://38.media.tumblr.com/8210fd413c5ce209678ef82d65731443/tumblr_mjphnqLpNy1s5jjtzo1_400.gif" /></marquee>' };
   }
 }
 
